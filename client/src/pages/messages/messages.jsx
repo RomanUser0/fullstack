@@ -9,12 +9,12 @@ function Messages() {
 
 
     useEffect(() => {
-
+        axios.post('api/users', { username: 'roman', password: 'password' }).then((res, req) => {
+            console.log(res)
+        })
     }, [])
 
-    axios.post('api/users', {username: 'roman', password: 'password'}).then((res, req) => {
-        console.log(res)
-    })
+
 
 
     const filePick = useRef(null)
