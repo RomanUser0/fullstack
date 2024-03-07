@@ -1,0 +1,10 @@
+.navigation {
+    grid-area: nav;
+    width: 150px;
+    height: 100vh;
+    background-color: blueviolet;
+}
+.navigation ul {
+    margin: 0;
+    list-style: none;
+}
