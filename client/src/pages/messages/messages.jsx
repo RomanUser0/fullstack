@@ -9,9 +9,12 @@ function Messages() {
 
 
     useEffect(async () => {
-       await axios.post('api/users', { username: 'roman', password: 'password' }).then((res, req) => {
+        await axios.get('https://jsonplaceholder.typicode.com/posts').then((res, req) => {
             console.log(res)
         })
+       /*await axios.post('api/users', { username: 'roman', password: 'password' }).then((res, req) => {
+            console.log(res)
+        })*/
     }, [])
 
 
