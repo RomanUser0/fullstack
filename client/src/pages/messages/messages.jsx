@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styles from './messages.module.css'
 import axios from 'axios'
 
@@ -6,6 +6,13 @@ import axios from 'axios'
 
 
 function Messages() {
+
+
+    useEffect(() => {
+        axios.get('api/users').then((res, req) => {
+            console.log(res)
+        })
+    }, [])
 
     const filePick = useRef(null)
     const [selectedFile, setSelectedFile] = useState('')
