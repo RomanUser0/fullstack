@@ -19,7 +19,6 @@ import configurations from '../configurations';
     password: 'password',
     database: 'roman',
     entities: entityes,
-    synchronize: true,
     autoLoadEntities: true,
   })],
   controllers: [AppController, UsersController],

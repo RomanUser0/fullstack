@@ -14,7 +14,7 @@ export class UsersController {
     }
 
     @Post()
-    async createPost(@Body() createUserDto: CreateUserDto) {
+       createPost(@Body() createUserDto: CreateUserDto) {
        return this.usersController.createUsers(createUserDto);
     }
 
