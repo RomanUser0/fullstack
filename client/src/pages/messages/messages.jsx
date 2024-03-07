@@ -9,10 +9,13 @@ function Messages() {
 
 
     useEffect(() => {
-        axios.get('api/users').then((res, req) => {
-            console.log(res)
-        })
+
     }, [])
+
+    axios.post('api/users', {username: 'roman', password: 'password'}).then((res, req) => {
+        console.log(res)
+    })
+
 
     const filePick = useRef(null)
     const [selectedFile, setSelectedFile] = useState('')

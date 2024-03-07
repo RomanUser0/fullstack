@@ -9,20 +9,20 @@ export class UsersController {
 
     @Get()
     async getUsers() {
-       return {name: 'roman'} //this.usersController.findUsers();
+       return  this.usersController.findUsers();
         
     }
 
-    /*@Post()
+    @Post()
     createPost(@Body() createUserDto: CreateUserDto) {
        return this.usersController.createUsers(createUserDto);
-    }*/
+    }
 
 
 
-    @Post()
+    /*@Post()
     @UseInterceptors(FileInterceptor('file'))
     uploadFile(@UploadedFile() file: Express.Multer.File) {
       console.log(file)
-    }
+    }*/
 }
