@@ -24,7 +24,7 @@ jobs:
                 cd client
                 npm i 
                 npm run build
-                cd /var/www/fullstack/fullstack/fullstack/dist$ 
+                cd ../dist
                 sudo pm2 start main.js
 
 
