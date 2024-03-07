@@ -24,8 +24,6 @@ jobs:
                 cd client
                 npm i 
                 npm run build
-                cd ../dist
-                sudo pm2 start main.js
 
 
                 

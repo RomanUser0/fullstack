@@ -16,7 +16,7 @@ import { join } from 'path';
     type: 'mysql',
     host: 'localhost',
     port: 3306,
-    username: 'user',
+    username: 'roman',
     password: 'password',
     database: 'roman',
     entities: entityes,
