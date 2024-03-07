@@ -7,7 +7,7 @@ import { FileInterceptor } from '@nestjs/platform-express';
 export class UsersController {
     constructor(private readonly usersController: UsersService) {}
 
-    @Get()
+    /*@Get()
     async getUsers() {
        return this.usersController.findUsers();
         
@@ -16,11 +16,11 @@ export class UsersController {
     @Post()
     createPost(@Body() createUserDto: CreateUserDto) {
        return this.usersController.createUsers(createUserDto);
-    }
+    }*/
 
 
 
-    @Post('api/upload')
+    @Post()
     @UseInterceptors(FileInterceptor('file'))
     uploadFile(@UploadedFile() file: Express.Multer.File) {
       console.log(file)
