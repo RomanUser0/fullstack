@@ -1,5 +1,5 @@
 import styles from './profile.module.css'
-
+import { useEffect } from 'react'
 
 
 
