@@ -8,9 +8,11 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import entityes from '../entities';
 import { ConfigModule } from '@nestjs/config';
 import configurations from '../configurations';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
-  imports: [ ConfigModule.forRoot({isGlobal: true, load: [configurations]}), UsersModule, TypeOrmModule.forRoot({
+  imports: [ ServeStaticModule.forRoot({rootPath: join(__dirname, '..', 'client/dist')}) ,ConfigModule.forRoot({isGlobal: true, load: [configurations]}), UsersModule, TypeOrmModule.forRoot({
     type: 'mysql',
     host: 'localhost',
     port: 3306,
