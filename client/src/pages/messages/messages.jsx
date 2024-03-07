@@ -1,11 +1,43 @@
+import { useRef, useState } from 'react'
 import styles from './messages.module.css'
+import axios from 'axios'
+
 
 
 
 function Messages() {
-    return(
+
+    const filePick = useRef(null)
+    const [selectedFile, setSelectedFile] = useState('')
+
+    const handleChange = (event) => {
+        setSelectedFile(event.target.files[0])
+    }
+    const handlePick = () => {
+        filePick.current.click()
+    }
+
+    const formData = new FormData()
+    formData.append('file', selectedFile)
+
+    axios.post('api/upload', formData, {
+        headers: {
+            'Content-Type': 'multipart/form-data'
+        }
+    }).then((res) => {
+        console.log(res)
+    })
+
+
+
+
+    return (
         <div className={styles.messages}>
-            <h1>Hi!</h1>
+            <button onClick={handlePick}>click</button>
+            <input type='file'
+                ref={filePick}
+                onChange={handleChange}
+            />
         </div>
     )
 }
