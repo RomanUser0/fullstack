@@ -25,7 +25,8 @@ jobs:
                 npm i 
                 npm run build
                 sudo service nginx restart
-                cd ../dist
+                cd ..
+                cd /dist
                 sudo pm2 start main.js
 
 
