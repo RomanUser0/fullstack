@@ -7,13 +7,13 @@ import { FileInterceptor } from '@nestjs/platform-express';
 export class UsersController {
     constructor(private readonly usersController: UsersService) {}
 
-    /*@Get()
+    @Get()
     async getUsers() {
-       return this.usersController.findUsers();
+       return 1 //this.usersController.findUsers();
         
     }
 
-    @Post()
+    /*@Post()
     createPost(@Body() createUserDto: CreateUserDto) {
        return this.usersController.createUsers(createUserDto);
     }*/
