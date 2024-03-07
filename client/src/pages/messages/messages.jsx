@@ -20,7 +20,7 @@ function Messages() {
     const formData = new FormData()
     formData.append('file', selectedFile)
 
-    axios.post('api/upload', formData, {
+    axios.post('api/users', formData, {
         headers: {
             'Content-Type': 'multipart/form-data'
         }
