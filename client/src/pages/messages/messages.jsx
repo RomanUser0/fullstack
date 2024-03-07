@@ -15,18 +15,19 @@ function Messages() {
     }
     const handlePick = () => {
         filePick.current.click()
+        axios.post('api/upload', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        }).then((res) => {
+            console.log(res)
+        })
+
     }
 
     const formData = new FormData()
     formData.append('file', selectedFile)
 
-    axios.post('api/upload', formData, {
-        headers: {
-            'Content-Type': 'multipart/form-data'
-        }
-    }).then((res) => {
-        console.log(res)
-    })
 
 
 
