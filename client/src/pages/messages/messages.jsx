@@ -23,9 +23,9 @@ function Messages() {
     const handleChange = (event) => {
         setSelectedFile(event.target.files[0])
     }
-    const handlePick = () => {
+    const  handlePick = async () => {
         filePick.current.click()
-        axios.post('api/users', formData, {
+        await axios.post('api/users', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

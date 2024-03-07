@@ -1,6 +1,5 @@
-import axios from 'axios'
 import styles from './profile.module.css'
-import { useEffect } from 'react'
+
 
 
 
