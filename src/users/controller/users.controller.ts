@@ -20,10 +20,11 @@ export class UsersController {
 
 
 
-    @Post()
+    /*@Post()
     @UseInterceptors(FileInterceptor('file'))
     uploadFile(@UploadedFile() file: Express.Multer.File) {
       console.log(file)
     }
+    */
 }
 
