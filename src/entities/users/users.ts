@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+/*import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 
 
@@ -20,3 +20,4 @@ export class User {
     @Column({nullable: true})
     authStrategy: string;
 }
+*/
