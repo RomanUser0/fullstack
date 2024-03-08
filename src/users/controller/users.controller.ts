@@ -1,4 +1,4 @@
-/*import { Body, Controller, Get, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Get, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { UsersService } from '../service/users.service';
 import { CreateUserDto } from 'src/users/dtos/CreateUser.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
@@ -26,4 +26,4 @@ export class UsersController {
       console.log(file)
     }
 }
-*/
+

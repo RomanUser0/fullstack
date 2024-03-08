@@ -1,4 +1,4 @@
-/*import { Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from 'src/entities/users/users';
 import { CreateUserParams } from 'src/utils/types';
@@ -24,4 +24,3 @@ export class UsersService {
         return this.userRepository.save(newUser)
     }
 }
-*/
