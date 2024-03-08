@@ -3,7 +3,7 @@ import { UsersService } from '../service/users.service';
 import { CreateUserDto } from 'src/users/dtos/CreateUser.dto';
 
 
-@Controller('api')
+@Controller('users')
 export class UsersController {
     constructor(private readonly usersController: UsersService) {}
 
@@ -13,7 +13,7 @@ export class UsersController {
         
     }
 
-    @Post('users')
+    @Post()
        createPost(@Body() createUserDto: CreateUserDto) {
        return this.usersController.createUsers(createUserDto);
     }
