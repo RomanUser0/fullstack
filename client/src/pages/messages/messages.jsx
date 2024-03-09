@@ -12,7 +12,7 @@ function Messages() {
        
     }, [])
 
-const n = axios.post('api/users', formData, {
+        axios.post('api/users', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
