@@ -8,11 +8,6 @@ import axios from 'axios'
 function Messages() {
 
 
-        axios.post('api/users', formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        })
 
 
     const filePick = useRef(null)
@@ -21,14 +16,22 @@ function Messages() {
     const handleChange = (event) => {
         setSelectedFile(event.target.files[0])
     }
-    const  handlePick =  () => {
+    const handlePick = () => {
         filePick.current.click()
-       
+
 
     }
 
     const formData = new FormData()
     formData.append('file', selectedFile)
+
+
+    axios.post('api/users', formData, {
+        headers: {
+            'Content-Type': 'multipart/form-data'
+        }
+    })
+
 
 
     return (
