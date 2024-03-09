@@ -12,6 +12,7 @@ function Messages() {
 
     const filePick = useRef(null)
     const [selectedFile, setSelectedFile] = useState('')
+    console.log(selectedFile)
 
     const handleChange = (event) => {
         setSelectedFile(event.target.files[0])
