@@ -26,7 +26,7 @@ function Messages() {
         const formData = new FormData()
         formData.append('file', selectedFile)
 
-         axios.post('api/users', formData).then((res) => {
+         axios.post('api/upload', formData).then((res) => {
             console.log(res)
         })
 
