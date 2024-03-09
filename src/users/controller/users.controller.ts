@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Get, Post, UploadedFiles, UseInterceptors } from '@nestjs/common';
 import { UsersService } from '../service/users.service';
 //import { CreateUserDto } from 'src/users/dtos/CreateUser.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
@@ -22,7 +22,7 @@ export class UsersController {
 
     @Post()
     @UseInterceptors(FileInterceptor('file', {dest: './uploads'}))
-    uploadFile(@UploadedFile() file: Express.Multer.File) {
+    uploadFile(@UploadedFiles() file) {
       console.log(file)
     }
     
