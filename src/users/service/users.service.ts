@@ -12,8 +12,8 @@ export class UsersService {
     constructor(@InjectRepository(User) private userRepository: Repository<User>) { }
 
 
-   async findUsers()  { 
-       return await this.userRepository.find()
+    findUsers() { 
+       return this.userRepository.find()
     }
 
     createUsers(userDetails: CreateUserParams) {
