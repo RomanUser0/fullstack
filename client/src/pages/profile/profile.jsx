@@ -8,7 +8,7 @@ import { useEffect } from 'react'
 function Profile() {
 
     useEffect(() => {
-       axios.get('api/users').then((req, res) => {
+       axios.get('api/users').then((res, req) => {
             console.log(res)
         })
     }, [])
