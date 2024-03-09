@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { UsersService } from '../service/users.service';
-import { CreateUserDto } from 'src/users/dtos/CreateUser.dto';
+//import { CreateUserDto } from 'src/users/dtos/CreateUser.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
 
 @Controller('api/users')
@@ -13,10 +13,10 @@ export class UsersController {
         
     }
 
-    @Post()
-       createPost(@Body() createUserDto: CreateUserDto) {
-       return this.usersController.createUsers(createUserDto);
-    }
+   // @Post()
+     //  createPost(@Body() createUserDto: CreateUserDto) {
+     //  return this.usersController.createUsers(createUserDto);
+   // }
 
 
 
