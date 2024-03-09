@@ -24,7 +24,7 @@ function Messages() {
     }
     const handelUpload = () => {
         const formData = new FormData()
-        formData.append('file', selectedFile)
+        formData.append('file', selectedFile, selectedFile.name)
 
         axios.post('api/users', formData, {
             headers: {
