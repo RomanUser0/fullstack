@@ -24,13 +24,9 @@ function Messages() {
     }
     const handelUpload = async () => {
         const formData = new FormData()
-        formData.append('file', selectedFile, selectedFile.name)
+        formData.append('file', selectedFile)
 
-        await axios.post('api/users', formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        }).then((res) => {
+        await axios.post('api/users', formData).then((res) => {
             console.log(res)
         })
 
