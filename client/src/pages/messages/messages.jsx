@@ -21,16 +21,21 @@ function Messages() {
 
 
     }
+    const handelUpload = () => {
+        const formData = new FormData()
+        formData.append('file', selectedFile)
 
-    const formData = new FormData()
-    formData.append('file', selectedFile)
+        axios.post('api/users', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
+
+    }
 
 
-    axios.post('api/users', formData, {
-        headers: {
-            'Content-Type': 'multipart/form-data'
-        }
-    })
+
+
 
 
 
@@ -41,6 +46,7 @@ function Messages() {
                 ref={filePick}
                 onChange={handleChange}
             />
+            <button onClick={handelUpload}>Отправить</button>
         </div>
     )
 }
