@@ -9,7 +9,7 @@ export class UsersController {
 
     @Get()
     async getUsers() {
-       return  this.usersController.findUsers();
+       return await this.usersController.findUsers();
         
     }
 
