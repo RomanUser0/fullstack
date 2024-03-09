@@ -8,10 +8,6 @@ import axios from 'axios'
 function Messages() {
 
 
-    useEffect(async () => {
-       
-    }, [])
-
         axios.post('api/users', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
@@ -33,9 +29,6 @@ function Messages() {
 
     const formData = new FormData()
     formData.append('file', selectedFile)
-
-
-
 
 
     return (
