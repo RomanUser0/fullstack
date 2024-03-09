@@ -11,7 +11,7 @@ function Messages() {
 
 
     const filePick = useRef(null)
-    const [selectedFile, setSelectedFile] = useState('')
+    const [selectedFile, setSelectedFile] = useState(null)
     console.log(selectedFile)
 
     const handleChange = (event) => {
@@ -30,6 +30,8 @@ function Messages() {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
+        }).then((res) => {
+            console.log(res)
         })
 
     }
