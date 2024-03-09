@@ -7,7 +7,7 @@ import { FileInterceptor } from '@nestjs/platform-express';
 export class UsersController {
     constructor(private readonly usersController: UsersService) {}
 
-    @Get()
+    @Get('api/users')
      getUsers() {
        return this.usersController.findUsers();
         
