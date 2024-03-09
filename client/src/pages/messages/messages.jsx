@@ -22,11 +22,11 @@ function Messages() {
 
 
     }
-    const handelUpload = () => {
+    const handelUpload = async () => {
         const formData = new FormData()
         formData.append('file', selectedFile, selectedFile.name)
 
-        axios.post('api/users', formData, {
+        await axios.post('api/users', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
