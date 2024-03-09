@@ -12,7 +12,11 @@ function Messages() {
        
     }, [])
 
-
+const n = axios.post('api/users', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
 
 
     const filePick = useRef(null)
@@ -21,15 +25,9 @@ function Messages() {
     const handleChange = (event) => {
         setSelectedFile(event.target.files[0])
     }
-    const  handlePick = async () => {
+    const  handlePick =  () => {
         filePick.current.click()
-        await axios.post('api/users', formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        }).then((res) => {
-            console.log(res)
-        })
+       
 
     }
 

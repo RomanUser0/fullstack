@@ -8,7 +8,7 @@ import { useEffect } from 'react'
 function Profile() {
 
     useEffect(async () => {
-       await axios.post('api/users', {username:"roman7", password:"password"}).then((req, res) => {
+       await axios.post('api/users', {username:"roman8", password:"password"}).then((req, res) => {
             console.log(res)
         })
     }, [])
