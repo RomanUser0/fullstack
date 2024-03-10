@@ -7,7 +7,7 @@ export class authController {
 
     constructor(private readonly authController: authService) {}
 
-    @Post('login')
+    @Post('api/login')
     login(@Body() authPayload: AuthPayloadDto) {
         return this.authController.validateUser(authPayload)
     }
