@@ -1,6 +1,6 @@
 import styles from './auth.module.css'
 import { useForm } from 'react-hook-form'
-import { useAuthMutation } from '../../store/authApi'
+import { useAuthMutation, useGetUsersQuery } from '../../store/authApi'
 
 
 
@@ -10,13 +10,15 @@ function Auth() {
     const { register, handleSubmit, formState: {errors} } = useForm({
         defaultValues: {}
     })
-    const [authRegister, {data}] = useAuthMutation()
+    const [authRegister, {dataAuth}] = useAuthMutation()
+    const {data = [], isLoading} = useGetUsersQuery()
+    console.log(data)
 
     const submit = async data => {
        await authRegister(data).unwrap()
         console.log(data)
     }
-    console.log(data)
+    console.log(dataAuth)
 
 
     return (
