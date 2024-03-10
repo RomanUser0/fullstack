@@ -12,8 +12,8 @@ function Auth() {
     })
     const [authRegister, {data}] = useAuthMutation()
 
-    const submit = data => {
-        authRegister(data)
+    const submit = async data => {
+       await authRegister(data)
         console.log(data)
     }
     console.log(data)
