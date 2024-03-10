@@ -12,8 +12,8 @@ export class authService {
 
 
 
-    validateUser({ username, password }: AuthPayloadDto) {
-        const findUser = this.userRepository.findBy({ username, password })
+    validateUser ({ username, password }: AuthPayloadDto) {
+        const findUser = async () => await this.userRepository.findOneBy({username, password})
         console.log(findUser)
         return findUser
         
