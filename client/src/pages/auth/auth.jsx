@@ -14,6 +14,7 @@ function Auth() {
 
     const submit = data => {
         authRegister(data)
+        console.log(data)
     }
     console.log(data)
 
