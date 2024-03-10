@@ -4,11 +4,13 @@ import Content from './components/content/content'
 import Header from './components/header/header'
 import Navigation from './components/navigation/navigation'
 import Auth from './pages/auth/auth'
+import { useSelector } from 'react-redux'
 
 
 function App() {
 
-  const [auth, setAuth] = useState(false)
+ const auth = useSelector(state => state.auth.auth)
+ console.log(auth)
 
 
   return (
