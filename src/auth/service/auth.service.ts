@@ -13,7 +13,7 @@ export class authService {
 
 
     validateUser({ username, password }: AuthPayloadDto) {
-        const findUser = {username, password}
+        const findUser = this.userRepository.findOneBy({ username, password })
         console.log(findUser)
         return findUser
         
