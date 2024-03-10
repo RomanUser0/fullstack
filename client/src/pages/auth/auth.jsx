@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import styles from './auth.module.css'
 import { useForm } from 'react-hook-form'
 import { useAuthMutation } from '../../store/authApi'
