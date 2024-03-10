@@ -13,7 +13,7 @@ function Auth() {
     const [authRegister, {data}] = useAuthMutation()
 
     const submit = async data => {
-       await authRegister(data)
+       await authRegister(data).unwrap()
         console.log(data)
     }
     console.log(data)
