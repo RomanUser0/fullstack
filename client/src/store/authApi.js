@@ -13,9 +13,19 @@ export const authApi = createApi({
                 url: 'login',
                 method: 'POST',
                 body
-            }),
+            })
+
+        }),
+        login: build.mutation({
+            query: (token) => ({
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+                method: 'GET',
+                url: 'status'
+            })
         })
     })
 })
 
-export const { useAuthMutation, useGetUsersQuery } = authApi
+export const { useAuthMutation, useGetUsersQuery, useLazyGetUsersQuery } = authApi
