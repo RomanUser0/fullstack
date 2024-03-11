@@ -16,7 +16,7 @@ export const authApi = createApi({
             })
 
         }),
-        login: build.mutation({
+        /*login: build.mutation({
             query: (token) => ({
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -24,7 +24,7 @@ export const authApi = createApi({
                 method: 'GET',
                 url: 'status'
             })
-        })
+        })*/
     })
 })
 
