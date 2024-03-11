@@ -20,6 +20,7 @@ export class authController {
     @UseGuards(JwtAuthGuard)
     status(@Req() req: Request) {
         console.log('111111')
+        
     }
 
 
