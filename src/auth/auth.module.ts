@@ -13,6 +13,6 @@ import { User } from 'src/entities/users/users';
   })],
   controllers: [authController],
   providers: [authService],
-  exports: [TypeOrmModule.forFeature([User]), JwtModule.register],
+  exports: [TypeOrmModule.forFeature([User]), JwtModule],
 })
 export class AuthModule {}
