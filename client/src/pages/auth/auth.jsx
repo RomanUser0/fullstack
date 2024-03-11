@@ -16,7 +16,7 @@ function Auth() {
 
     const submit = async data => {
        await authRegister(data).unwrap()
-        console.log(data)
+        console.log(data.data)
     }
     console.log(dataAuth)
 
